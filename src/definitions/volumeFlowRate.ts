@@ -43,7 +43,10 @@ export type VolumeFlowRateImperialUnits =
   | 'ft3/h'
   | 'yd3/s'
   | 'yd3/min'
-  | 'yd3/h';
+  | 'yd3/h'
+  | 'bbl-oil/s'
+  | 'bbl-oil/m'
+  | 'bbl-oil/h';
 
 const metric: Record<VolumeFlowRateMetricUnits, Unit> = {
   'mm3/s': {
@@ -307,6 +310,27 @@ const imperial: Record<VolumeFlowRateImperialUnits, Unit> = {
       plural: 'Cubic yards per hour',
     },
     to_anchor: 25852.7 / 3600,
+  },
+  'bbl-oil/s': {
+    name: {
+      singular: 'Barrel of oil per second',
+      plural: 'Barrels of oil per second',
+    },
+    to_anchor: 5376,
+  },
+  'bbl-oil/m': {
+    name: {
+      singular: 'Barrel of oil per minute',
+      plural: 'Barrels of oil per minute',
+    },
+    to_anchor: 5376 / 60,
+  },
+  'bbl-oil/h': {
+    name: {
+      singular: 'Barrel of oil per hour',
+      plural: 'Barrels of oil per hour',
+    },
+    to_anchor: 5376 / 3600,
   },
 };
 

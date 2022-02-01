@@ -41,6 +41,7 @@ import temperature, {
   TemperatureUnits,
 } from './temperature';
 import time, { TimeSystems, TimeUnits } from './time';
+import torque, { TorqueSystems, TorqueUnits } from './torque';
 import voltage, { VoltageSystems, VoltageUnits } from './voltage';
 import volume, { VolumeSystems, VolumeUnits } from './volume';
 import volumeFlowRate, {
@@ -73,6 +74,7 @@ export type AllMeasuresSystems =
   | SpeedSystems
   | TemperatureSystems
   | TimeSystems
+  | TorqueSystems
   | VoltageSystems
   | VolumeSystems
   | VolumeFlowRateSystems;
@@ -102,6 +104,7 @@ export type AllMeasuresUnits =
   | SpeedUnits
   | TemperatureUnits
   | TimeUnits
+  | TorqueUnits
   | VoltageUnits
   | VolumeUnits
   | VolumeFlowRateUnits;
@@ -131,6 +134,7 @@ export type AllMeasures =
   | 'speed'
   | 'temperature'
   | 'time'
+  | 'torque'
   | 'voltage'
   | 'volume'
   | 'volumeFlowRate';
@@ -163,6 +167,7 @@ const allMeasures: Record<
   speed,
   temperature,
   time,
+  torque,
   voltage,
   volume,
   volumeFlowRate,
@@ -194,6 +199,7 @@ export type {
   SpeedSystems,
   TemperatureSystems,
   TimeSystems,
+  TorqueSystems,
   VoltageSystems,
   VolumeSystems,
   VolumeFlowRateSystems,
@@ -250,6 +256,7 @@ export {
   speed,
   temperature,
   time,
+  torque,
   voltage,
   volume,
   volumeFlowRate,

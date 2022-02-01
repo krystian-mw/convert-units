@@ -9,6 +9,7 @@ export type FrequencySIUnits =
   | 'MHz'
   | 'GHz'
   | 'THz'
+  | 'rps'
   | 'rpm'
   | 'deg/s'
   | 'rad/s';
@@ -55,6 +56,13 @@ const SI: Record<FrequencySIUnits, Unit> = {
       plural: 'terahertz',
     },
     to_anchor: 1000 * 1000 * 1000 * 1000,
+  },
+  rps: {
+    name: {
+      singular: 'rotation per second',
+      plural: 'rotations per seconds',
+    },
+    to_anchor: 1,
   },
   rpm: {
     name: {

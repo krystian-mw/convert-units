@@ -29,7 +29,8 @@ export type VolumeImperialUnits =
   | 'qt'
   | 'gal'
   | 'ft3'
-  | 'yd3';
+  | 'yd3'
+  | 'bbl-oil';
 
 const metric: Record<VolumeMetricUnits, Unit> = {
   mm3: {
@@ -211,6 +212,13 @@ const imperial: Record<VolumeImperialUnits, Unit> = {
       plural: 'Cubic yards',
     },
     to_anchor: 25852.7,
+  },
+  'bbl-oil': {
+    name: {
+      singular: 'Barrel of oil',
+      plural: 'Barrels of oil',
+    },
+    to_anchor: 5376,
   },
 };
 
